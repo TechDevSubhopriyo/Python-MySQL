@@ -3,6 +3,6 @@ mydb = mysql.connector.connect(host="localhost", user="root", passwd="admin", da
 
 mycursor = mydb.cursor()
 
-mycursor.execute("CREATE TABLE `contact_list`(id int AUTO_INCREMENT, name varchar(50), phone int(15), PRIMARY KEY (id)) COLLATE 'utf8_bin'")
+mycursor.execute("CREATE TABLE `contact_list`(id int AUTO_INCREMENT, name varchar(50), phone varchar(20), PRIMARY KEY (id)) COLLATE 'utf8_bin'")
 if(mycursor._executed):
     print("Table created")
