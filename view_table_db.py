@@ -3,8 +3,7 @@ mydb = mysql.connector.connect(host="localhost", user="root", passwd="admin", da
 
 mycursor = mydb.cursor()
 
-tables = mycursor.execute("Show tables")
+mycursor.execute("SHOW TABLES")
 
-if(tables != None):
-    for table in tables:
-        print(table)
+for table in mycursor:
+    print(table)
